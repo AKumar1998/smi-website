@@ -1,0 +1,123 @@
+.page-hero{background:var(--near-black);height:auto;padding:calc(var(--nav-h) + 80px) 0 96px;align-items:flex-start;}
+
+/* ── GRID BACKGROUND & FADING ── */
+.cert-grid-wrapper {
+  position: relative;
+  margin-top: 64px;
+  z-index: 1;
+}
+.cert-grid-bg {
+  position: absolute;
+  inset: 0;
+  background: var(--grey-light); /* The color of the grid lines */
+  z-index: -1;
+  /* Fade out at the edges using radial gradient */
+  mask-image: radial-gradient(ellipse at center, black 40%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse at center, black 40%, transparent 100%);
+}
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px; /* This exposes the background to form the lines */
+}
+
+/* ── CARD STYLING ── */
+.cert-card {
+  background: var(--white); /* Ensure background is solid so lines only show in gaps */
+  padding: 60px 48px; /* Improved spacing */
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.cert-card-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--rose-gold-gradient);
+  color: var(--white);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 6px 12px;
+  margin-bottom: 32px; /* Increased margin */
+  align-self: flex-start;
+}
+.cert-card-badge svg {
+  width: 14px;
+  height: 14px;
+  fill: var(--white);
+}
+.cert-card h3 {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: var(--black);
+  margin-bottom: 12px;
+}
+.cert-card-standard {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--grey-mid);
+  margin-bottom: 24px;
+}
+.cert-card p {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.8;
+  color: var(--grey-light);
+  margin-bottom: 32px; /* Push applies-to down */
+  flex-grow: 1; /* Pushes the applies box to the bottom */
+}
+
+/* ── APPLIES TO BOX ── */
+.applies-to {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--black);
+  border: 1px solid var(--black); /* Requested border */
+  padding: 16px 20px;
+  border-radius: 4px;
+}
+.applies-to span {
+  display: block;
+  color: var(--grey-mid);
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0;
+  font-family: var(--font-body);
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+@media(max-width:1000px){
+  .cert-grid{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:600px){
+  .cert-grid{grid-template-columns:1fr;}
+  .cert-card { padding: 40px 24px; }
+}
+
+/* ── BALLISTIC CHART OVERRIDES ── */
+.chart-wrap {
+  cursor: zoom-in;
+  border: 1px solid rgba(0,0,0,0.05);
+  background: var(--white);
+}
+.chart-img {
+  height: auto !important;
+  width: 100%;
+  object-fit: contain !important;
+}
+@media(max-width:900px) {
+  .chart-img { height: auto !important; }
+}
+@media(max-width:768px) {
+  .chart-section-wrap { padding: 40px 24px !important; }
+}

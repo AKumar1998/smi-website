@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 60" fill="none">
+  <!-- Shield icon -->
+  <path d="M18 4L6 9v8c0 7.18 4.97 13.9 12 15.5C25.03 30.9 30 24.18 30 17V9L18 4z" fill="#e85d04"/>
+  <path d="M13 17l3 3 6-6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Wordmark -->
+  <text x="40" y="24" font-family="'Bebas Neue', 'Arial Black', sans-serif" font-size="20" letter-spacing="2" fill="white">SECURE MOBILE</text>
+  <text x="40" y="38" font-family="'Barlow Condensed', 'Arial Narrow', sans-serif" font-size="9" letter-spacing="3.5" fill="#e85d04">INDIA  ·  EST. 1995</text>
+  <!-- Tagline -->
+  <line x1="40" y1="44" x2="200" y2="44" stroke="rgba(255,255,255,0.15)" stroke-width="0.5"/>
+  <text x="40" y="54" font-family="'Barlow Condensed', 'Arial Narrow', sans-serif" font-size="7.5" letter-spacing="2" fill="rgba(255,255,255,0.35)">PROTECTING INVALUABLE LIVES</text>
+</svg>

@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node *)",
+      "WebFetch(domain:inkasarmored.com)",
+      "WebFetch(domain:www.alpineco.com)",
+      "WebFetch(domain:jrdeftech.com)",
+      "Bash(curl -s -L \"https://jrdeftech.com/architectural-armouring.html\" --max-time 30 -H \"User-Agent: Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/120.0.0.0 Safari/537.36\")",
+      "Bash(python *)",
+      "Bash(Get-Content \"C:\\\\Users\\\\ajayb\\\\Desktop\\\\SMI V2\\\\styles.css\")",
+      "Bash(Select-Object -Last 120)",
+      "Bash(python3)",
+      "Bash(python3 -c ' *)",
+      "Bash(python3 -u -c ' *)",
+      "Bash(findstr /n \"drone threat\\\\|anti-drone-shelter\\\\|anti-drone-tunnel\\\\|solution-card\\\\|threat-icon\\\\|risk-icon\" anti-drone-innovation.html)",
+      "Bash(findstr /n \"threat-icon\" anti-drone-innovation.html)",
+      "Bash(findstr /n \"risk-icon\" anti-drone-innovation.html)",
+      "Bash(findstr /n \"solution-card\\\\|solution-link\\\\|shelter\\\\|tunnel\" anti-drone-innovation.html)",
+      "Bash(powershell \"Select-String -Path 'anti-drone-innovation.html' -Pattern 'threat-icon|risk-icon|shelter|tunnel|solution-card' | Select-Object LineNumber, Line\")",
+      "Bash(powershell \"Select-String -Path 'about.html' -Pattern 'mission|vision|values' | Select-Object LineNumber, Line | Select-Object -First 20\")",
+      "Bash(powershell \"Select-String -Path 'styles.css' -Pattern 'mvv-grid|grid-3' | Select-Object LineNumber, Line\")",
+      "Bash(powershell \"Select-String -Path 'styles.css' -Pattern '@media' | Select-Object LineNumber, Line\")",
+      "Bash(powershell \"Select-String -Path 'about.html' -Pattern 'Trusted By|trusted by|client|institution' | Select-Object LineNumber, Line | Select-Object -First 20\")",
+      "Bash(powershell \"Select-String -Path 'styles.css' -Pattern 'clients-flex|client-item' | Select-Object LineNumber, Line\")"
+    ]
+  }
+}
