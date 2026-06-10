@@ -867,36 +867,44 @@ document.addEventListener('DOMContentLoaded', () => {
 
   new ScrollFrameSequence({
     section: "#aramid-sequence",
+
     framePath: isMobile
       ? "./assets/frame-sequences/aramid-mobile"
       : "./assets/frame-sequences/aramid",
+
     frameCount: isMobile
-      ? 45
-      : 59,
-    startFrame: 2679
+      ? 38
+      : 39,
+
+    startFrame: isMobile
+      ? 1
+      : 2699
   });
 
   new ScrollFrameSequence({
-    section: "#aramid-install-sequence",
-    framePath: isMobile
-      ? "./assets/frame-sequences/aramid-install-mobile"
-      : "./assets/frame-sequences/aramid-install",
-    frameCount: isMobile
-      ? 98
-      : 98,
-    startFrame: 2738
+  section: "#aramid-install-sequence",
 
-  });
+  framePath: isMobile
+    ? "./assets/frame-sequences/aramid-install-mobile"
+    : "./assets/frame-sequences/aramid-install",
 
+  frameCount: isMobile
+    ? 98
+    : 98,
+
+  startFrame: isMobile
+    ? 1
+    : 2738
+});
   new ScrollFrameSequence({
     section: "#glass-sequence",
     framePath: isMobile
       ? "./assets/frame-sequences/glass-mobile"
       : "./assets/frame-sequences/glass",
     frameCount: isMobile
-      ? 98
-      : 98,
-    startFrame: 3011
+      ? 56
+      : 56,
+    startFrame: 3053
   });
 
   new ScrollFrameSequence({
