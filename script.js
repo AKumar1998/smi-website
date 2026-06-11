@@ -896,27 +896,38 @@ document.addEventListener('DOMContentLoaded', () => {
     ? 1
     : 2738
 });
-  new ScrollFrameSequence({
-    section: "#glass-sequence",
-    framePath: isMobile
-      ? "./assets/frame-sequences/glass-mobile"
-      : "./assets/frame-sequences/glass",
-    frameCount: isMobile
-      ? 56
-      : 56,
-    startFrame: 3053
-  });
 
   new ScrollFrameSequence({
-    section: "#glass-install-sequence",
-    framePath: isMobile
-      ? "./assets/frame-sequences/glass-install-mobile"
-      : "./assets/frame-sequences/glass-install",
-    frameCount: isMobile
-      ? 88
-      : 88,
-    startFrame: 3109
-  });
+  section: "#glass-sequence",
+
+  framePath: isMobile
+    ? "./assets/frame-sequences/glass-mobile"
+    : "./assets/frame-sequences/glass",
+
+  frameCount: isMobile
+    ? 56
+    : 56,
+
+  startFrame: isMobile
+    ? 1
+    : 3053
+});
+
+  new ScrollFrameSequence({
+  section: "#glass-install-sequence",
+
+  framePath: isMobile
+    ? "./assets/frame-sequences/glass-install-mobile"
+    : "./assets/frame-sequences/glass-install",
+
+  frameCount: isMobile
+    ? 70
+    : 88,
+
+  startFrame: isMobile
+    ? 1
+    : 3109
+});
 
   new ScrollFrameSequence({
     section: "#capsule-sequence",
