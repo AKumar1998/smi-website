@@ -929,16 +929,22 @@ document.addEventListener('DOMContentLoaded', () => {
     : 3109
 });
 
-  new ScrollFrameSequence({
-    section: "#capsule-sequence",
-    framePath: isMobile
-      ? "./assets/frame-sequences/capsule-mobile"
-      : "./assets/frame-sequences/capsule",
-    frameCount: isMobile
-      ? 72
-      : 72,
-    startFrame: 3796
-  });
+new ScrollFrameSequence({
+  section: "#capsule-sequence",
+
+  framePath: isMobile
+    ? "./assets/frame-sequences/capsule-mobile"
+    : "./assets/frame-sequences/capsule",
+
+  frameCount: isMobile
+    ? 51
+    : 72,
+
+  startFrame: isMobile
+    ? 1
+    : 3796
+});
+
 
 
   /* ── PARALLAX VIDEO ── */
