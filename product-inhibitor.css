@@ -10,8 +10,8 @@
 .spec-table td:last-child{color:var(--black);font-weight:400;}
 .feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;}
 .feat-card{background:var(--dark);padding:36px 28px;}
-.feat-card-icon{width:44px;height:44px;background:rgba(30,58,138,.15);display:flex;align-items:center;justify-content:center;margin-bottom:16px;}
-.feat-card-icon svg{width:20px;height:20px;fill:var(--rose-gold-gradient);}
+.feat-card-icon{width:44px;height:44px;background:var(--rose-gold-gradient);display:flex;align-items:center;justify-content:center;margin-bottom:16px;}
+.feat-card-icon svg{width:20px;height:20px;fill:var(--white);}
 .feat-card h4{font-family:var(--font-cond);font-size:13px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--white);margin-bottom:10px;}
 .feat-card p{font-size:14px;font-weight:400;line-height:1.75;color:rgba(255,255,255,.5);}
 @media(max-width:900px){.product-hero-inner{grid-template-columns:1fr;}.product-hero-content{padding:60px 0;}.feat-grid{grid-template-columns:1fr 1fr;}}
