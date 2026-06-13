@@ -882,68 +882,68 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   new ScrollFrameSequence({
-  section: "#aramid-install-sequence",
+    section: "#aramid-install-sequence",
 
-  framePath: isMobile
-    ? "./assets/frame-sequences/aramid-install-mobile"
-    : "./assets/frame-sequences/aramid-install",
+    framePath: isMobile
+      ? "./assets/frame-sequences/aramid-install-mobile"
+      : "./assets/frame-sequences/aramid-install",
 
-  frameCount: isMobile
-    ? 98
-    : 98,
+    frameCount: isMobile
+      ? 98
+      : 98,
 
-  startFrame: isMobile
-    ? 1
-    : 2738
-});
-
-  new ScrollFrameSequence({
-  section: "#glass-sequence",
-
-  framePath: isMobile
-    ? "./assets/frame-sequences/glass-mobile"
-    : "./assets/frame-sequences/glass",
-
-  frameCount: isMobile
-    ? 56
-    : 56,
-
-  startFrame: isMobile
-    ? 1
-    : 3053
-});
+    startFrame: isMobile
+      ? 1
+      : 2738
+  });
 
   new ScrollFrameSequence({
-  section: "#glass-install-sequence",
+    section: "#glass-sequence",
 
-  framePath: isMobile
-    ? "./assets/frame-sequences/glass-install-mobile"
-    : "./assets/frame-sequences/glass-install",
+    framePath: isMobile
+      ? "./assets/frame-sequences/glass-mobile"
+      : "./assets/frame-sequences/glass",
 
-  frameCount: isMobile
-    ? 70
-    : 88,
+    frameCount: isMobile
+      ? 56
+      : 56,
 
-  startFrame: isMobile
-    ? 1
-    : 3109
-});
+    startFrame: isMobile
+      ? 1
+      : 3053
+  });
 
-new ScrollFrameSequence({
-  section: "#capsule-sequence",
+  new ScrollFrameSequence({
+    section: "#glass-install-sequence",
 
-  framePath: isMobile
-    ? "./assets/frame-sequences/capsule-mobile"
-    : "./assets/frame-sequences/capsule",
+    framePath: isMobile
+      ? "./assets/frame-sequences/glass-install-mobile"
+      : "./assets/frame-sequences/glass-install",
 
-  frameCount: isMobile
-    ? 51
-    : 72,
+    frameCount: isMobile
+      ? 70
+      : 88,
 
-  startFrame: isMobile
-    ? 1
-    : 3796
-});
+    startFrame: isMobile
+      ? 1
+      : 3109
+  });
+
+  new ScrollFrameSequence({
+    section: "#capsule-sequence",
+
+    framePath: isMobile
+      ? "./assets/frame-sequences/capsule-mobile"
+      : "./assets/frame-sequences/capsule",
+
+    frameCount: isMobile
+      ? 51
+      : 72,
+
+    startFrame: isMobile
+      ? 1
+      : 3796
+  });
 
 
 
@@ -978,5 +978,72 @@ new ScrollFrameSequence({
     }, { passive: true });
 
   }
+
+
+  const featureButtons = document.querySelectorAll(".feature-expand-btn");
+
+  featureButtons.forEach((button) => {
+
+    button.addEventListener("click", () => {
+
+      const modal = document.getElementById(button.dataset.modal);
+
+      if (!modal) return;
+
+      modal.classList.add("active");
+
+      const video = modal.querySelector("video");
+
+      if (video) {
+
+        video.currentTime = 0;
+
+        video.play();
+
+      }
+
+    });
+
+  });
+
+  document.querySelectorAll(".feature-close").forEach((button) => {
+
+    button.addEventListener("click", () => {
+
+      const modal = button.closest(".feature-modal");
+
+      const video = modal.querySelector("video");
+
+      if (video) {
+
+        video.pause();
+
+      }
+
+      modal.classList.remove("active");
+
+    });
+
+  });
+
+  document.querySelectorAll(".feature-modal").forEach((modal) => {
+
+    modal.addEventListener("click", (event) => {
+
+      if (event.target !== modal) return;
+
+      const video = modal.querySelector("video");
+
+      if (video) {
+
+        video.pause();
+
+      }
+
+      modal.classList.remove("active");
+
+    });
+
+  });
 
 });
