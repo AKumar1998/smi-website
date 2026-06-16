@@ -28,7 +28,7 @@
 .rnd-feature-text {
   max-width: 500px;
 }
-.rnd-card-icon{width:48px;height:48px;background:rgba(30,58,138,.12);display:flex;align-items:center;justify-content:center;margin-bottom:20px;}
+.rnd-card-icon{width:48px;height:48px;display:flex;align-items:center;justify-content:center;margin-bottom:20px;}
 .rnd-card-icon svg{width:22px;height:22px;fill:var(--rose-gold-gradient);}
 .rnd-feature-text h3{font-family:var(--font-cond);font-size:32px;font-weight:800;letter-spacing:0.5px;text-transform:uppercase;color:var(--black);margin-bottom:16px;line-height:1.1;}
 .rnd-feature-text p{font-size:16px;font-weight:300;line-height:1.8;color:var(--grey-mid);}
@@ -147,7 +147,7 @@
   font-weight: 700;
   letter-spacing: -0.5px;
   text-transform: none;
-  color: #2563eb;
+  color: var(--black);
   margin-bottom: 16px;
   line-height: 1.2;
 }
