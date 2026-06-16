@@ -178,6 +178,17 @@ textarea {
   display: block;
 }
 
+.tag-about {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--black);
+  margin-bottom: 16px;
+  display: block;
+}
+
 .tag-blast-page {
   font-family: var(--font-mono);
   font-size: 12px;
@@ -2998,7 +3009,7 @@ footer {
 }
 
 .cert-item:hover {
-  border-color: var(--rose-gold-gradient);
+  border-color: var(--copper-light);
 }
 
 .cert-item svg {
@@ -5477,9 +5488,11 @@ footer {
   color: var(--black);
   line-height: 1.2;
   margin-bottom: 6px;
+  min-height: 48px;
 }
 
 .client-cat {
+  margin-top: auto;
   font-family: var(--font-cond);
   font-size: 10px;
   font-weight: 600;
