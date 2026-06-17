@@ -119,14 +119,14 @@
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #ffffff;
-  background: #4169E1; /* Royal Blue */
+  background: var(--rose-gold-gradient); /* Royal Blue */
   padding: 14px 28px;
   border-radius: 50px; /* Pill shape */
   transition: background .3s cubic-bezier(.4,0,.2,1), transform .3s cubic-bezier(.4,0,.2,1), box-shadow .3s cubic-bezier(.4,0,.2,1);
   box-shadow: 0 4px 14px rgba(65, 105, 225, 0.3);
 }
 .inkas-service-link:hover {
-  background: #2a52be; /* Darker royal blue on hover */
+  background: var(--black); /* Darker royal blue on hover */
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(65, 105, 225, 0.4);
   color: #ffffff;
@@ -173,7 +173,7 @@
 .why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;}
 .why-item{padding:36px 28px;background:var(--off-white);border-top:3px solid transparent;transition:border-color .35s cubic-bezier(.4,0,.2,1),background .35s cubic-bezier(.4,0,.2,1);}
 .why-item:hover{border-color:var(--rose-gold-gradient);background:var(--white);}
-.why-icon{width:44px;height:44px;background:#4169E1;display:flex;align-items:center;justify-content:center;margin-bottom:18px;border-radius:4px;}
+.why-icon{width:44px;height:44px;background:var(--rose-gold-gradient);display:flex;align-items:center;justify-content:center;margin-bottom:18px;border-radius:4px;}
 .why-icon svg{width:20px;height:20px;fill:var(--white);}
 .why-item h4{font-family:var(--font-cond);font-size:13px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--black);margin-bottom:8px;}
 .why-item p{font-size:clamp(15px,1.2vw,16px);font-weight:400;line-height:1.7;color:var(--grey-mid);}
