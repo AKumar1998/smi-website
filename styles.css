@@ -1191,6 +1191,15 @@ textarea {
   color: rgba(255, 255, 255, .4);
 }
 
+.breadcrumb a {
+  font-family: var(--font-cond);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, .4);
+}
+
 .breadcrumb span.sep {
   color: rgba(255, 255, 255, .4);
 }
@@ -2062,7 +2071,7 @@ textarea {
 .blast-page-hero-bg {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(10, 10, 10, .97) 0%, rgba(180, 30, 0, .15) 60%, rgba(10, 10, 10, .95) 100%), url('https://images.unsplash.com/photo-1612892483236-52d32a0e0ac1?w=1920&q=80') center/cover no-repeat;
+  background: linear-gradient(135deg, rgba(10, 10, 10, .97) 0%, rgba(180, 30, 0, .15) 60%, rgba(10, 10, 10, .95) 100%), url('./assets/blast-all-banner.webp') center/cover no-repeat;
 }
 
 .blast-page-hero-bg::before {
@@ -5515,6 +5524,16 @@ footer {
 /* ── Inner-page hero patterns (shared across all product/service pages) ── */
 .page-hero-breadcrumb {
   margin-bottom: 20px;
+}
+
+.page-hero-breadcrumb,
+.page-hero-breadcrumb a,
+.page-hero-breadcrumb span {
+  font-family: var(--font-cond);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
 .page-hero-intro {

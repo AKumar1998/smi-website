@@ -938,8 +938,6 @@
 
   letter-spacing:2px;
   text-transform:uppercase;
-
-  color:#60a5fa;
 }
 
 .arch-showcase-content h3{
@@ -992,4 +990,97 @@
     font-size:28px;
   }
 
+}
+
+/* ==========================================
+   PROVEN EXPERTISE
+   Copper Gradient Theme
+   ========================================== */
+
+.arch-showcase-section{
+  position: relative;
+  overflow: hidden;
+  background: var(--black);
+}
+
+.arch-showcase-section::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:
+    radial-gradient(
+      ellipse at 15% 70%,
+      rgba(201,121,74,.12) 0%,
+      transparent 55%
+    ),
+    radial-gradient(
+      ellipse at 85% 15%,
+      rgba(201,121,74,.06) 0%,
+      transparent 50%
+    );
+}
+
+/* keep content above gradient */
+.arch-showcase-section .container{
+  position:relative;
+  z-index:2;
+}
+
+/* heading */
+.arch-showcase-intro .tag{
+  color: var(--white);
+}
+
+.arch-showcase-intro h2{
+  color: var(--white);
+}
+
+.arch-showcase-intro p{
+  color: rgba(255,255,255,.62);
+}
+
+/* cards */
+.arch-showcase-card{
+  background:#100a05;
+  border:1px solid rgba(201,121,74,.10);
+  transition:
+    border-color .35s ease,
+    background .35s ease,
+    transform .35s ease;
+}
+
+.arch-showcase-card:hover{
+  background:#1a0e06;
+  border-color:rgba(201,121,74,.35);
+  transform:translateY(-4px);
+}
+
+/* image zoom */
+.arch-showcase-image{
+  overflow:hidden;
+}
+
+.arch-showcase-image img{
+  transition:
+    transform .55s cubic-bezier(.4,0,.2,1),
+    filter .45s cubic-bezier(.4,0,.2,1);
+}
+
+.arch-showcase-card:hover .arch-showcase-image img{
+  transform:scale(1.04);
+  filter:brightness(.82);
+}
+
+/* text */
+.arch-showcase-label{
+  color: var(--text-copper);
+}
+
+.arch-showcase-content h3{
+  color: var(--white);
+}
+
+.arch-showcase-content p{
+  color: rgba(255,255,255,.52);
 }

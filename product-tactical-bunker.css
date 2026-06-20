@@ -10,9 +10,181 @@
 .spec-table td:last-child{color:var(--black);font-weight:400;}
 .feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;}
 .feat-card{background:var(--dark);padding:36px 28px;}
-.feat-card-icon{width:44px;height:44px;background:rgba(30,58,138,.15);display:flex;align-items:center;justify-content:center;margin-bottom:16px;}
-.feat-card-icon svg{width:20px;height:20px;fill:var(--rose-gold-gradient);}
+.feat-card-icon{width:44px;height:44px;background:var(--rose-gold-gradient);display:flex;align-items:center;justify-content:center;margin-bottom:16px;}
+.feat-card-icon svg{width:20px;height:20px;fill:var(--white);}
 .feat-card h4{font-family:var(--font-cond);font-size:13px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--white);margin-bottom:10px;}
 .feat-card p{font-size:14px;font-weight:400;line-height:1.75;color:rgba(255,255,255,.5);}
 @media(max-width:900px){.product-hero-inner{grid-template-columns:1fr;}.product-hero-content{padding:60px 0;}.feat-grid{grid-template-columns:1fr 1fr;}}
 @media(max-width:600px){.feat-grid{grid-template-columns:1fr;}}
+
+
+/* =========================================
+TACTICAL BUNKER TABLES
+========================================= */
+
+.tb-specs-section{
+    background:#fff;
+    padding:120px 0;
+}
+
+.tb-specs-header{
+    text-align:center;
+    max-width:760px;
+    margin:auto;
+    margin-bottom:60px;
+}
+
+.tb-specs-header p{
+    margin-top:20px;
+    color:var(--grey-mid);
+    line-height:1.8;
+    font-size:15px;
+}
+
+.tb-tabs{
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    margin-bottom:40px;
+    flex-wrap:wrap;
+}
+
+.tb-tab{
+
+    border:none;
+    cursor:pointer;
+
+    padding:13px 28px;
+
+    font-family:var(--font-cond);
+    font-size:12px;
+    font-weight:700;
+
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+
+    background:#f3f3f3;
+    color:var(--black);
+
+    transition:.35s;
+}
+
+.tb-tab.active{
+
+    background:var(--rose-gold-gradient);
+    color:#fff;
+
+}
+
+.tb-table-wrap{
+
+    display:none;
+
+    overflow-x:auto;
+
+    border:1px solid rgba(0,0,0,.08);
+
+}
+
+.tb-table-wrap.active{
+
+    display:block;
+
+}
+
+.tb-table{
+
+    min-width:1000px;
+
+}
+
+.tb-row{
+
+    display:grid;
+
+    grid-template-columns:280px repeat(4,1fr);
+
+}
+
+.tb-row>div{
+
+    padding:18px 20px;
+
+    border-right:1px solid rgba(0,0,0,.06);
+    border-bottom:1px solid rgba(0,0,0,.06);
+
+    font-size:14px;
+    line-height:1.6;
+
+}
+
+.tb-row>div:last-child{
+
+    border-right:none;
+
+}
+
+.tb-head{
+
+    background:var(--black);
+
+}
+
+.tb-head div{
+
+    color:#fff;
+
+    font-family:var(--font-cond);
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+
+}
+
+.tb-row div:first-child{
+
+    background:#fafafa;
+
+    font-family:var(--font-cond);
+    font-size:11px;
+    font-weight:700;
+
+    letter-spacing:1.4px;
+    text-transform:uppercase;
+
+}
+
+.tb-row:nth-child(even):not(.tb-head) div:not(:first-child){
+
+    background:#fcfcfc;
+
+}
+
+@media(max-width:900px){
+
+    .tb-specs-section{
+
+        padding:80px 0;
+
+    }
+
+    .tb-tabs{
+
+        flex-direction:column;
+
+    }
+
+    .tb-tab{
+
+        width:100%;
+
+    }
+
+    .tb-table{
+
+        min-width:820px;
+
+    }
+
+}

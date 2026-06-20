@@ -34,10 +34,10 @@ document.addEventListener('DOMContentLoaded', () => {
   // Preview data keyed by data-preview attribute
   const previewData = {
     // Company
-    'co-about': { tag: 'Company', title: 'About SMI', text: '30+ years of ballistic protection engineering — our story, mission, and values.', img: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=640&q=80' },
-    'co-innovations': { tag: 'Company', title: 'Our Innovations', text: 'Pioneering indigenous defence technology since 1995 — breakthroughs that protect India.', img: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=640&q=80' },
-    'co-rnd': { tag: 'Company', title: 'Research & Development', text: 'In-house R&D lab driving next-generation ballistic and blast mitigation solutions.', img: 'https://images.unsplash.com/photo-1590650153855-d9e808231d41?w=640&q=80' },
-    'co-facility': { tag: 'Company', title: 'Our Facility', text: 'State-of-the-art manufacturing campus in Nangloi, Delhi — 100% made in India.', img: 'https://images.unsplash.com/photo-1567446537708-ac4aa75c9c28?w=640&q=80' },
+    'co-about': { tag: 'Company', title: 'About SMI', text: '30+ years of ballistic protection engineering — our story, mission, and values.', img: './assets/legacy-cars.jpg' },
+    'co-innovations': { tag: 'Company', title: 'Our Innovations', text: 'Pioneering indigenous defence technology since 1995 — breakthroughs that protect India.', img: './assets/fab-innovation.jpg' },
+    'co-rnd': { tag: 'Company', title: 'Research & Development', text: 'In-house R&D lab driving next-generation ballistic and blast mitigation solutions.', img: './assets/material.jpg' },
+    'co-facility': { tag: 'Company', title: 'Our Facility', text: 'State-of-the-art manufacturing campus in Nangloi, Delhi — 100% made in India.', img: './assets/facility.webp' },
     'co-certs': { tag: 'Company', title: 'Certifications', text: 'DRDO/TBRL approved. MHA certified. Internationally validated ballistic standards.', img: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=640&q=80' },
     // Services
     'sv-auto': { tag: 'Services', title: 'Automotive Armouring', text: 'Precision vehicle armouring from B4 to VR10 — engineered and fabricated in India.', img: 'https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=640&q=80' },
@@ -383,19 +383,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  /* ── CONTACT FORM ── */
-  const contactForm = document.getElementById('contactForm');
-  if (contactForm) {
-    contactForm.addEventListener('submit', e => {
-      e.preventDefault();
-      const btn = contactForm.querySelector('.form-submit');
-      const orig = btn.innerHTML;
-      btn.innerHTML = `<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="white" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Message Sent Successfully!`;
-      btn.style.background = 'var(--dark)';
-      btn.disabled = true;
-      setTimeout(() => { btn.innerHTML = orig; btn.style.background = ''; btn.disabled = false; contactForm.reset(); }, 3500);
-    });
-  }
+
 
   /* ── NEWSLETTER FORM ── */
   const nlBtn = document.querySelector('.nl-form button');
@@ -1043,6 +1031,79 @@ document.addEventListener('DOMContentLoaded', () => {
       modal.classList.remove("active");
 
     });
+
+  });
+
+  const bunkerTabs = document.querySelectorAll(".tb-tab");
+
+  const bunkerTables = {
+
+    specs: document.getElementById("tb-specs"),
+    features: document.getElementById("tb-features")
+
+  };
+
+  bunkerTabs.forEach(tab => {
+
+    tab.addEventListener("click", () => {
+
+      bunkerTabs.forEach(btn => btn.classList.remove("active"));
+
+      tab.classList.add("active");
+
+      Object.values(bunkerTables).forEach(el => {
+
+        el.classList.remove("active");
+
+      });
+
+      bunkerTables[tab.dataset.table].classList.add("active");
+
+    });
+
+  });
+
+  const form = document.getElementById("contactForm");
+
+  form.addEventListener("submit", async (e) => {
+
+    e.preventDefault();
+
+    const payload = {
+      firstName: form.firstName.value,
+      lastName: form.lastName.value,
+      email: form.email.value,
+      phone: form.phone.value,
+      organisation: form.organisation.value,
+      enquiryType: form.enquiryType.value,
+      product: form.product.value,
+      message: form.message.value
+    };
+
+    try {
+
+      const res = await fetch("email_service.php", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(payload)
+      });
+
+      const data = await res.json();
+
+      if (data.success) {
+        alert("Your message has been sent successfully.");
+        form.reset();
+      } else {
+        alert(data.message || "Unable to send message.");
+      }
+
+    } catch (err) {
+
+      alert("Network error. Please try again.");
+
+    }
 
   });
 

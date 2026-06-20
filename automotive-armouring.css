@@ -419,7 +419,6 @@
 .logo-img {
   object-fit: contain;
   opacity: .5;
-  filter: grayscale(100%);
   transition: opacity .25s, filter .25s;
 }
 
@@ -462,7 +461,7 @@
   width: 38px;
   height: 38px;
   flex-shrink: 0;
-  background: rgba(30, 58, 138, .15);
+  background: var(--rose-gold-gradient);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -621,13 +620,13 @@
 
 /* ── NEW BUTTON STYLE ── */
 .btn-royal-blue {
-  background: #1E3A8A;
+  background: var(--rose-gold-gradient);
   color: #ffffff;
   border-radius: 0 !important;
 }
 
 .btn-royal-blue:hover {
-  background: #0F2557;
+  background: var(--rose-gold-gradient-dark);
   color: #ffffff;
 }
 
