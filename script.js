@@ -38,32 +38,41 @@ document.addEventListener('DOMContentLoaded', () => {
     'co-innovations': { tag: 'Company', title: 'Our Innovations', text: 'Pioneering indigenous defence technology since 1995 — breakthroughs that protect India.', img: './assets/fab-innovation.jpg' },
     'co-rnd': { tag: 'Company', title: 'Research & Development', text: 'In-house R&D lab driving next-generation ballistic and blast mitigation solutions.', img: './assets/material.jpg' },
     'co-facility': { tag: 'Company', title: 'Our Facility', text: 'State-of-the-art manufacturing campus in Nangloi, Delhi — 100% made in India.', img: './assets/facility.webp' },
-    'co-certs': { tag: 'Company', title: 'Certifications', text: 'DRDO/TBRL approved. MHA certified. Internationally validated ballistic standards.', img: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=640&q=80' },
+    'co-certs': { tag: 'Company', title: 'Certifications', text: 'DRDO/TBRL approved. MHA certified. Internationally validated ballistic standards.', img: './assets/certification-banner.webp' },
     // Services
-    'sv-auto': { tag: 'Services', title: 'Automotive Armouring', text: 'Precision vehicle armouring from B4 to VR10 — engineered and fabricated in India.', img: 'https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=640&q=80' },
+    'sv-all': {
+      tag: 'Services',
+      title: 'All Services',
+      text: 'Explore Secure Mobile India’s complete range of armouring, blast mitigation, ballistic protection, and security engineering services.',
+      img: './assets/services.webp'
+    },
+    'sv-auto': { tag: 'Services', title: 'Automotive Armouring', text: 'Precision vehicle armouring from B4 to VR10 — engineered and fabricated in India.', img: './assets/placeholder-automotive.jpg' },
     'sv-br': { tag: 'Services', title: 'BR Products', text: 'Comprehensive bullet-resistant product range for personal and static protection.', img: './assets/br-products.jpg' },
-    'sv-arch': { tag: 'Services', title: 'Architectural Armouring', text: 'Fortifying buildings, perimeters, and critical infrastructure against ballistic and blast threats.', img: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=640&q=80' },
+    'sv-arch': { tag: 'Services', title: 'Architectural Armouring', text: 'Fortifying buildings, perimeters, and critical infrastructure against ballistic and blast threats.', img: './assets/arch-menu.webp' },
     // BR sub-products
     'br-jackets': { tag: 'BR Products', title: 'BR Jackets', text: 'NIJ Level IIIA/III certified body armour for police, paramilitary, and VIP protection.', img: './assets/br-jackets.jpg' },
-    'br-helmets': { tag: 'BR Products', title: 'BR Helmets', text: 'High-cut and PASGT-style ballistic helmets for front-line security forces.', img: 'https://images.unsplash.com/photo-1590650153855-d9e808231d41?w=640&q=80' },
-    'br-shields': { tag: 'BR Products', title: 'BR Shields', text: 'Handheld Level III+ BR Shields for police entry teams and VIP close protection.', img: 'https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=640&q=80' },
-    'br-cabin': { tag: 'BR Products', title: 'BR Sentry Cabins', text: 'Steel-core BR doors for government offices, banks, and high-security facilities.', img: 'https://images.unsplash.com/photo-1567446537708-ac4aa75c9c28?w=640&q=80' },
-    'br-lecture': { tag: 'BR Products', title: 'BR Lecture Stands', text: 'Multi-laminate transparent armour for vehicles, teller windows, and secure rooms.', img: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=640&q=80' },
-    'br-cabins': { tag: 'BR Products', title: 'Sentry Posts & Guard Cabins', text: 'Pre-fabricated bulletproof guard posts and sentry boxes for perimeter security.', img: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=640&q=80' },
-    'br-morcha': { tag: 'BR Products', title: 'BR Morcha & Cladding', text: 'Modular wall panels and architectural cladding for ballistic protection of spaces.', img: 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=640&q=80' },
-    'br-tower': { tag: 'BR Products', title: 'BR Observation Tower', text: 'Bank teller windows, reception counters, and payment screens with ballistic glass.', img: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=640&q=80' },
+    'br-helmets': { tag: 'BR Products', title: 'BR Helmets', text: 'High-cut and PASGT-style ballistic helmets for front-line security forces.', img: './assets/helmets/helmet1.webp' },
+    'br-shields': { tag: 'BR Products', title: 'BR Shields', text: 'Handheld Level III+ BR Shields for police entry teams and VIP close protection.', img: './assets/shield-menu.webp' },
+    'br-cabin': { tag: 'BR Products', title: 'BR Sentry Cabins', text: 'Bullet-resistant sentry cabins engineered for perimeter security, checkpoints, and critical infrastructure protection.', img: './assets/cabin-banner.webp' },
+    'br-lecture': { tag: 'BR Products', title: 'BR Lecture Stands', text: 'Bullet-resistant lecture stands designed to provide discreet ballistic protection during public addresses and high-security events.', img: './assets/lecture-banner.webp' },
+    'br-patka': { tag: 'BR Products', title: 'BR Patka', text: 'SMI BR Patka for high-security applications.', img: './assets/patka-menu.webp' },
+    'br-morcha': { tag: 'BR Products', title: 'BR Morcha & Cladding', text: 'Modular wall panels and architectural cladding for ballistic protection of spaces.', img: './assets/morcha-menu.webp' },
+    'br-tower': { tag: 'BR Products', title: 'BR Observation Tower', text: 'Elevated bullet-resistant observation towers for surveillance, perimeter monitoring, and critical security deployments.', img: './assets/tower-menu.webp' },
     // Blast Protection
-    'bp-all': { tag: 'Blast Protection', title: 'All Blast Products', text: 'India\'s most comprehensive bomb & blast mitigation range — TBRL and MHA certified.', img: 'https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=640&q=80' },
-    'bp-bsb': { tag: 'Blast Protection', title: 'Bomb Suppression Blanket', text: 'TBRL-certified BSB & BCR system — stops 17-grain fragments at V50 415–660 m/s.', img: 'https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=640&q=80' },
-    'bp-basket': { tag: 'Blast Protection', title: 'Bomb Basket', text: 'Ballistic-grade EOD containment basket for IED transport during bomb disposal operations.', img: 'https://images.unsplash.com/photo-1558618047-f8616ee58a6a?w=640&q=80' },
-    'bp-bcb': { tag: 'Blast Protection', title: 'Blast Containment Bin', text: 'Public-area blast containment bin tested to MHA 2013 — rated for 2 KG TNT equivalent.', img: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=640&q=80' },
-    'bp-bunker': { tag: 'Blast Protection', title: 'Tactical Bunker', text: 'Blast-resistant bulletproof bunkers deployed by IAF, Indian Navy, ISRO, and police forces.', img: 'https://images.unsplash.com/photo-1612892483236-52d32a0e0ac1?w=640&q=80' },
-    'bp-bvcs': { tag: 'Blast Protection', title: 'BVCS', text: 'Blast & Vehicle Check Screen — Armox steel checkpoint protection for vehicle search operations.', img: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=640&q=80' },
+    'bp-all': { tag: 'Blast Protection', title: 'All Blast Products', text: 'India\'s most comprehensive bomb & blast mitigation range — TBRL and MHA certified.', img: './assets/blast-all-banner.webp' },
+    'bp-bsb': { tag: 'Blast Protection', title: 'Bomb Suppression Blanket', text: 'TBRL-certified BSB & BCR system — stops 17-grain fragments at V50 415–660 m/s.', img: './assets/blanket-menu.webp' },
+    'bp-basket': { tag: 'Blast Protection', title: 'Bomb Basket', text: 'Ballistic-grade EOD containment basket for IED transport during bomb disposal operations.', img: './assets/basket-menu.webp' },
+    'bp-bcb': { tag: 'Blast Protection', title: 'Blast Containment Bin', text: 'Public-area blast containment bin tested to MHA 2013 — rated for 2 KG TNT equivalent.', img: './assets/bin-menu.webp' },
+    'bp-bunker': { tag: 'Blast Protection', title: 'Tactical Bunker', text: 'Blast-resistant bulletproof bunkers deployed by IAF, Indian Navy, ISRO, and police forces.', img: './assets/bunker-menu.webp' },
+    'bp-inhibitor': {
+      tag: 'Blast Protection',
+      title: 'Bomb Inhibitor',
+      text: 'Portable blast mitigation solution designed to suppress and contain explosive effects from suspicious packages and improvised devices.',
+      img: './assets/inhib-menu.webp'
+    },
     // Architectural sub
-    'arch-building': { tag: 'Architectural', title: 'Infrastructure Armouring', text: 'End-to-end ballistic hardening of walls, openings, and critical infrastructure facilities.', img: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=640&q=80' },
-    'arch-tunnel': { tag: 'Architectural', title: 'Anti Drone Tunnel', text: 'Hardened passage tunnels with counter-UAS technology for high-value asset protection.', img: 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=640&q=80' },
-    'arch-shelter': { tag: 'Architectural', title: 'Anti Drone Shelter', text: 'Deployable and permanent shelters offering multi-layer drone and ballistic protection.', img: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=640&q=80' },
-    'arch-tower': { tag: 'Architectural', title: 'Blast Resistant Observation Towers', text: '360° protected observation towers — deployed at PMO, Gujarat CM residence, and more.', img: 'https://images.unsplash.com/photo-1563720223185-11003d516935?w=640&q=80' },
+    'arch-building': { tag: 'Architectural', title: 'Infrastructure Armouring', text: 'End-to-end ballistic hardening of walls, openings, and critical infrastructure facilities.', img: './assets/infra-menu.webp' },
+    'arch-drone': { tag: 'Architectural', title: 'Anti-Drone Innovation', text: 'Innovation in the field for Anti-Drone protection.', img: './assets/drone-menu.webp' },
   };
 
   // Initialise preview panels
