@@ -114,14 +114,13 @@
   align-items: center;
   gap: 10px;
   font-family: var(--font-cond);
-  font-size: 13px;
+  font-size: 10px;
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #ffffff;
   background: var(--rose-gold-gradient); /* Royal Blue */
   padding: 14px 28px;
-  border-radius: 50px; /* Pill shape */
   transition: background .3s cubic-bezier(.4,0,.2,1), transform .3s cubic-bezier(.4,0,.2,1), box-shadow .3s cubic-bezier(.4,0,.2,1);
   box-shadow: 0 4px 14px rgba(65, 105, 225, 0.3);
 }
@@ -162,7 +161,7 @@
 @media(max-width:800px) {
   .inkas-service-row,
   .inkas-service-row:nth-child(even) {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
   .inkas-service-img { height: 350px; }
   .inkas-service-text { padding: 60px 24px; }
@@ -179,3 +178,79 @@
 .why-item p{font-size:clamp(15px,1.2vw,16px);font-weight:400;line-height:1.7;color:var(--grey-mid);}
 @media(max-width:1100px){.svc-overview-grid{grid-template-columns:repeat(2,1fr);}.why-grid{grid-template-columns:repeat(2,1fr);}}
 @media(max-width:640px){.svc-overview-grid{grid-template-columns:1fr;}.why-grid{grid-template-columns:1fr;}}
+
+
+@media (max-width: 600px) {
+
+  .two-col.two-col-72 {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .grid-2 > div {
+    padding: 20px 12px !important;
+    min-width: 0;
+  }
+
+  .grid-2 span:first-child {
+    font-size: 36px !important;
+  }
+
+  .grid-2 span:last-child {
+    font-size: 9px !important;
+    letter-spacing: 1px !important;
+    line-height: 1.4;
+  }
+}
+
+@media (max-width: 420px) {
+
+  .grid-2 {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .grid-2 > div {
+    padding: 24px !important;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .body-text {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .title-lg {
+    line-height: 1.15;
+  }
+
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .grid-2 > div {
+    overflow-wrap: anywhere;
+  }
+
+  .grid-2 span {
+    word-break: break-word;
+  }
+
+}

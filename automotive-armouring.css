@@ -794,29 +794,23 @@
 
 .hero-sequence-content {
   position: absolute;
-
   left: 24px;
   right: 24px;
-
   bottom: 120px;
-
   z-index: 10;
 
   color: #fff;
 
   opacity: 0;
-
-  transform: translateY(40px);
+  transform: translateY(35px);
 
   transition:
-    opacity .8s ease,
-    transform .8s ease;
+    opacity .9s ease,
+    transform .9s cubic-bezier(.22, 1, .36, 1);
 }
 
 .hero-sequence-content.active {
-
   opacity: 1;
-
   transform: translateY(0);
 }
 
@@ -1070,7 +1064,7 @@
 
   margin-top: 16px;
 
-  font-size: 15px;
+  font-size: 13px;
 
   line-height: 1.8;
 
@@ -1123,25 +1117,28 @@
 }
 
 .feature-modal-box video {
-    width: 100%;
-    height: 500px;
-    object-fit: cover;
-    object-position: center;
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+  object-position: center;
 }
 
 .feature-modal-box h3 {
 
   font-family: var(--font-cond);
 
-  font-size: 36px;
+  font-size: 30px;
 
   margin-bottom: 20px;
+  margin-top: 20px;
 
 }
 
 .feature-modal-box p {
 
-  font-size: 16px;
+  font-size: 12 px;
 
   line-height: 1.9;
 
@@ -1207,8 +1204,73 @@
 
   .feature-modal-box h3 {
 
-    font-size: 32px;
+    font-size: 30px;
 
   }
 
+}
+
+.desktop-sequence {
+  display: block;
+}
+
+.mobile-sequence-video {
+  display: none;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .desktop-sequence {
+    display: none;
+  }
+
+  .mobile-sequence-video {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .frame-sequence {
+    height: 100vh !important;
+  }
+
+  .frame-sequence-sticky {
+    position: relative !important;
+    top: auto !important;
+    height: 100vh !important;
+  }
+
+  .frame-canvas {
+    display: none !important;
+  }
+
+  .mobile-sequence-video {
+    display: block !important;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+  }
+
+}
+
+@media (max-width: 900px) {
+  .mat-section-header {
+    flex-direction: column;
+    align-items: flex-start !important;
+    gap: 20px !important;
+    margin-bottom: 40px !important;
+    padding-bottom: 24px !important;
+  }
+
+  .mat-section-header p {
+    max-width: 100% !important;
+    width: 100%;
+    flex-shrink: 1 !important;
+    align-self: flex-start !important;
+  }
 }

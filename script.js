@@ -380,16 +380,6 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     stepBtns.forEach((btn, i) => btn.addEventListener('click', () => activateStep(i)));
     activateStep(0);
-
-    const swipeHint = document.getElementById('stepperSwipeHint');
-    const stepperNavEl = document.querySelector('.stepper-nav');
-    if (swipeHint && stepperNavEl) {
-      stepperNavEl.addEventListener('scroll', () => {
-        swipeHint.style.transition = 'opacity .35s';
-        swipeHint.style.opacity = '0';
-        setTimeout(() => swipeHint.remove(), 380);
-      }, { once: true });
-    }
   }
 
 
@@ -781,27 +771,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         }
 
-        if (window.innerWidth <= 768) {
 
-          const content =
-            document.querySelector(
-              ".hero-sequence-content"
-            );
-
-          if (progress > 0.08) {
-
-            content?.classList.add(
-              "active"
-            );
-
-          } else {
-
-            content?.classList.remove(
-              "active"
-            );
-
-          }
-        }
       }
     }
 
@@ -846,101 +816,75 @@ document.addEventListener('DOMContentLoaded', () => {
   const isMobile =
     window.innerWidth <= 768;
 
-  new ScrollFrameSequence({
+  if (isMobile) {
 
-    section: "#hero-sequence",
+    window.addEventListener("load", () => {
 
-    framePath: isMobile
-      ? "./assets/frame-sequences/hero-mobile"
-      : "./assets/frame-sequences/hero",
+      setTimeout(() => {
 
-    frameCount: isMobile
-      ? 89
-      : 121,
+        document
+          .querySelector(".hero-sequence-content")
+          ?.classList.add("active");
 
-    startFrame: 1
+      }, 400);
 
-  });
+    });
 
-  new ScrollFrameSequence({
-    section: "#aramid-sequence",
+  }
 
-    framePath: isMobile
-      ? "./assets/frame-sequences/aramid-mobile"
-      : "./assets/frame-sequences/aramid",
+  if (!isMobile) {
 
-    frameCount: isMobile
-      ? 38
-      : 39,
+    new ScrollFrameSequence({
+      section: "#hero-sequence",
+      framePath: "./assets/frame-sequences/hero",
+      frameCount: 121,
+      startFrame: 1
+    });
 
-    startFrame: isMobile
-      ? 1
-      : 2699
-  });
+    new ScrollFrameSequence({
+      section: "#aramid-sequence",
+      framePath: "./assets/frame-sequences/aramid",
+      frameCount: 39,
+      startFrame: 2699
+    });
 
-  new ScrollFrameSequence({
-    section: "#aramid-install-sequence",
+    new ScrollFrameSequence({
+      section: "#aramid-install-sequence",
+      framePath: "./assets/frame-sequences/aramid-install",
+      frameCount: 98,
+      startFrame: 2738
+    });
 
-    framePath: isMobile
-      ? "./assets/frame-sequences/aramid-install-mobile"
-      : "./assets/frame-sequences/aramid-install",
+    new ScrollFrameSequence({
+      section: "#glass-sequence",
+      framePath: "./assets/frame-sequences/glass",
+      frameCount: 56,
+      startFrame: 3053
+    });
 
-    frameCount: isMobile
-      ? 98
-      : 98,
+    new ScrollFrameSequence({
+      section: "#glass-install-sequence",
+      framePath: "./assets/frame-sequences/glass-install",
+      frameCount: 88,
+      startFrame: 3109
+    });
 
-    startFrame: isMobile
-      ? 1
-      : 2738
-  });
+    new ScrollFrameSequence({
+      section: "#capsule-sequence",
+      framePath: "./assets/frame-sequences/capsule",
+      frameCount: 72,
+      startFrame: 3796
+    });
 
-  new ScrollFrameSequence({
-    section: "#glass-sequence",
+  } else {
 
-    framePath: isMobile
-      ? "./assets/frame-sequences/glass-mobile"
-      : "./assets/frame-sequences/glass",
+    document.querySelectorAll(".mobile-sequence-video").forEach(video => {
+      video.muted = true;
+      video.playsInline = true;
+      video.play().catch(() => { });
+    });
 
-    frameCount: isMobile
-      ? 56
-      : 56,
-
-    startFrame: isMobile
-      ? 1
-      : 3053
-  });
-
-  new ScrollFrameSequence({
-    section: "#glass-install-sequence",
-
-    framePath: isMobile
-      ? "./assets/frame-sequences/glass-install-mobile"
-      : "./assets/frame-sequences/glass-install",
-
-    frameCount: isMobile
-      ? 70
-      : 88,
-
-    startFrame: isMobile
-      ? 1
-      : 3109
-  });
-
-  new ScrollFrameSequence({
-    section: "#capsule-sequence",
-
-    framePath: isMobile
-      ? "./assets/frame-sequences/capsule-mobile"
-      : "./assets/frame-sequences/capsule",
-
-    frameCount: isMobile
-      ? 51
-      : 72,
-
-    startFrame: isMobile
-      ? 1
-      : 3796
-  });
+  }
 
 
 
@@ -968,7 +912,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const translateY = (progress - 0.5) * 80;
 
         invincibleVideo.style.transform =
-          `translate(-50%, calc(-50% + ${translateY}px))`;
+          `translate(-50%, -50%) translateY(${translateY}px)`;
 
       }
 
@@ -1072,48 +1016,127 @@ document.addEventListener('DOMContentLoaded', () => {
 
   });
 
+  //Contact Form JS
+
+  function showToast(title, text) {
+
+    const toast = document.getElementById("form-toast");
+
+    toast.querySelector(".form-toast-title").textContent = title;
+    toast.querySelector(".form-toast-text").textContent = text;
+
+    toast.classList.add("show");
+
+    clearTimeout(toast._timer);
+
+    toast._timer = setTimeout(() => {
+
+      toast.classList.remove("show");
+
+    }, 3500);
+
+  }
   const form = document.getElementById("contactForm");
 
-  form.addEventListener("submit", async (e) => {
+  if (form) {
 
-    e.preventDefault();
+    const submitBtn = form.querySelector('button[type="submit"]');
 
-    const payload = {
-      firstName: form.firstName.value,
-      lastName: form.lastName.value,
-      email: form.email.value,
-      phone: form.phone.value,
-      organisation: form.organisation.value,
-      enquiryType: form.enquiryType.value,
-      product: form.product.value,
-      message: form.message.value
-    };
+    const defaultButtonHTML = `
+    Send Message
+    <svg viewBox="0 0 24 24"
+         fill="none"
+         stroke="white"
+         stroke-width="2.5"
+         width="15"
+         height="15">
+      <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+    </svg>
+  `;
 
-    try {
+    form.addEventListener("submit", async (e) => {
 
-      const res = await fetch("email_service.php", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify(payload)
-      });
+      e.preventDefault();
 
-      const data = await res.json();
+      submitBtn.disabled = true;
+      submitBtn.style.opacity = "0.7";
+      submitBtn.innerHTML = "Sending...";
 
-      if (data.success) {
-        alert("Your message has been sent successfully.");
-        form.reset();
-      } else {
-        alert(data.message || "Unable to send message.");
+      const payload = {
+
+        firstName: form.firstName.value,
+        lastName: form.lastName.value,
+        email: form.email.value,
+        phone: form.phone.value,
+        organisation: form.organisation.value,
+        enquiryType: form.enquiryType.value,
+        product: form.product.value,
+        message: form.message.value
+
+      };
+
+      try {
+
+        const res = await fetch("email_service.php", {
+
+          method: "POST",
+
+          headers: {
+            "Content-Type": "application/json"
+          },
+
+          body: JSON.stringify(payload)
+
+        });
+
+        const data = await res.json();
+
+        if (data.success) {
+
+          showToast(
+            "Message Received",
+            "Thank you for contacting Secure Mobile India. Our team will respond within one business day."
+          );
+
+          form.reset();
+
+        } else {
+
+          showToast(
+            "Submission Failed",
+            data.message || "Please try again or contact us directly."
+          );
+
+        }
+
+      } catch (err) {
+
+        showToast(
+          "Network Error",
+          "Please check your connection and try again."
+        );
+
+      } finally {
+
+        submitBtn.disabled = false;
+        submitBtn.style.opacity = "";
+        submitBtn.innerHTML = defaultButtonHTML;
+
       }
 
-    } catch (err) {
+    });
 
-      alert("Network error. Please try again.");
+  }
 
-    }
+  // Home Page parallax video autoplay
 
-  });
+  if (invincibleVideo) {
+    invincibleVideo.muted = true;
+    invincibleVideo.playsInline = true;
+
+    invincibleVideo.play().catch(err => {
+      console.log("Autoplay failed:", err);
+    });
+  }
 
 });

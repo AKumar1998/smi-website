@@ -1,0 +1,7 @@
+@media (max-width: 768px) {
+  .blast-page-hero {
+    min-height: 420px;
+    padding-top: calc(var(--nav-h) + 60px);
+    padding-bottom: 32px;
+  }
+}
