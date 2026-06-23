@@ -3483,7 +3483,7 @@ footer {
 }
 
 .faq-a p {
-  font-size: clamp(15px, 1.3vw, 17px);
+  font-size: clamp(12px, 1.2vw, 14px);
   font-weight: 300;
   line-height: 1.8;
   color: var(--grey-mid);
@@ -3548,7 +3548,7 @@ footer {
 }
 
 .nf-content p {
-  font-size: clamp(15px, 1.3vw, 17px);
+  font-size: clamp(12px, 1.2vw, 14px);
   font-weight: 300;
   color: rgba(255, 255, 255, .55);
   line-height: 1.75;
@@ -3959,7 +3959,7 @@ footer {
 .v-stat svg {
   width: 20px;
   height: 20px;
-  fill: var(--rose-gold-gradient);
+  fill: white;
   flex-shrink: 0;
 }
 

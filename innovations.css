@@ -205,3 +205,10 @@
 .inno-mob-btn:hover svg {
   stroke: var(--white);
 }
+
+
+@media (max-width: 900px) {
+  .inno-mob-text .inno-item-year {
+    font-size: 32px;
+  }
+}

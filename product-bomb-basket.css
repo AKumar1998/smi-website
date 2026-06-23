@@ -5,7 +5,7 @@
 .product-hero-img img{width:100%;height:100%;object-fit:cover;}
 .spec-table{width:100%;border-collapse:collapse;margin-top:32px;}
 .spec-table tr{border-bottom:1px solid rgba(0,0,0,.06);}
-.spec-table td{padding:14px 0;font-size:15px;line-height:1.5;}
+.spec-table td{padding:14px 0;font-size:14px;line-height:1.5;}
 .spec-table td:first-child{font-family:var(--font-cond);font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--grey-mid);width:42%;}
 .spec-table td:last-child{color:var(--black);font-weight:400;}
 .feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;}
