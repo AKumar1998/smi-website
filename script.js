@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
     'co-about': { tag: 'Company', title: 'About SMI', text: '30+ years of ballistic protection engineering — our story, mission, and values.', img: './assets/legacy-cars.jpg' },
     'co-innovations': { tag: 'Company', title: 'Our Innovations', text: 'Pioneering indigenous defence technology since 1995 — breakthroughs that protect India.', img: './assets/fab-innovation.jpg' },
     'co-rnd': { tag: 'Company', title: 'Research & Development', text: 'In-house R&D lab driving next-generation ballistic and blast mitigation solutions.', img: './assets/material.jpg' },
-    'co-facility': { tag: 'Company', title: 'Our Facility', text: 'State-of-the-art manufacturing campus in Nangloi, Delhi — 100% made in India.', img: './assets/facility.webp' },
+    'co-facility': { tag: 'Company', title: 'Our Facility', text: 'State-of-the-art manufacturing campus in  Delhi — 100% made in India.', img: './assets/facility.webp' },
     'co-certs': { tag: 'Company', title: 'Certifications', text: 'DRDO/TBRL approved. MHA certified. Internationally validated ballistic standards.', img: './assets/certification-banner.webp' },
     // Services
     'sv-all': {
@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
     'br-morcha': { tag: 'BR Products', title: 'BR Morcha & Cladding', text: 'Modular wall panels and architectural cladding for ballistic protection of spaces.', img: './assets/morcha-menu.webp' },
     'br-tower': { tag: 'BR Products', title: 'BR Observation Tower', text: 'Elevated bullet-resistant observation towers for surveillance, perimeter monitoring, and critical security deployments.', img: './assets/tower-menu.webp' },
     // Blast Protection
-    'bp-all': { tag: 'Blast Protection', title: 'All Blast Products', text: 'India\'s most comprehensive bomb & blast mitigation range — TBRL and MHA certified.', img: './assets/blast-all-banner.webp' },
+    'bp-all': { tag: 'Blast Protection', title: 'All Blast Mitigation Products', text: 'India\'s most comprehensive bomb & blast mitigation range — TBRL and MHA certified.', img: './assets/blast-all-banner.webp' },
     'bp-bsb': { tag: 'Blast Protection', title: 'Bomb Suppression Blanket', text: 'TBRL-certified BSB & BCR system — stops 17-grain fragments at V50 415–660 m/s.', img: './assets/blanket-menu.webp' },
     'bp-basket': { tag: 'Blast Protection', title: 'Bomb Basket', text: 'Ballistic-grade EOD containment basket for IED transport during bomb disposal operations.', img: './assets/basket-menu.webp' },
     'bp-bcb': { tag: 'Blast Protection', title: 'Blast Containment Bin', text: 'Public-area blast containment bin tested to MHA 2013 — rated for 2 KG TNT equivalent.', img: './assets/bin-menu.webp' },

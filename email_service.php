@@ -47,7 +47,7 @@ if (
 
 /* CHANGE THIS TO YOUR EMAIL */
 
-$to = "enquiry@securemobileindia.com";
+$to = "contact@securemobileindia.com";
 
 /* Sent from your own domain */
 
