@@ -3024,7 +3024,7 @@ footer {
   letter-spacing: 1.5px;
   text-transform: uppercase;
   color: var(--black);
-  margin-bottom: 6px;
+  margin-bottom: 18px;
 }
 
 .cert-item p {
@@ -5474,7 +5474,7 @@ footer {
 
 .client-name {
   font-family: var(--font-cond);
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase;
