@@ -6019,3 +6019,25 @@ footer {
     width:auto;
   }
 }
+
+/* Make every card the same height */
+.blast-card {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Let the content fill the remaining height */
+.blast-card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 22px 22px 26px;
+}
+
+/* Push CTA to the bottom */
+.blast-cta-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: auto; /* <-- This is the important line */
+}

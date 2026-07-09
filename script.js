@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
     'bp-all': { tag: 'Blast Protection', title: 'All Blast Mitigation Products', text: 'India\'s most comprehensive bomb & blast mitigation range — TBRL and MHA certified.', img: './assets/blast-all-banner.webp' },
     'bp-bsb': { tag: 'Blast Protection', title: 'Bomb Suppression Blanket', text: 'TBRL-certified BSB & BCR system — stops 17-grain fragments at V50 415–660 m/s.', img: './assets/blanket-menu.webp' },
     'bp-basket': { tag: 'Blast Protection', title: 'Bomb Basket', text: 'Ballistic-grade EOD containment basket for IED transport during bomb disposal operations.', img: './assets/basket-menu.webp' },
-    'bp-bcb': { tag: 'Blast Protection', title: 'Blast Containment Bin', text: 'Public-area blast containment bin tested to MHA 2013 — rated for 2 KG TNT equivalent.', img: './assets/bin-menu.webp' },
+    'bp-bcb': { tag: 'Blast Protection', title: 'Blast Containment Bin', text: 'Public-area blast containment bin tested to MHA standards — rated for 2 KG TNT equivalent.', img: './assets/bin-menu.webp' },
     'bp-bunker': { tag: 'Blast Protection', title: 'Tactical Bunker', text: 'Blast-resistant bulletproof bunkers deployed by IAF, Indian Navy, ISRO, and police forces.', img: './assets/bunker-menu.webp' },
     'bp-inhibitor': {
       tag: 'Blast Protection',
