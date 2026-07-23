@@ -3283,7 +3283,6 @@ footer {
   color: var(--black);
   transition: border-color .2s;
   outline: none;
-  -webkit-appearance: none;
   border-radius: 0;
 }
 
